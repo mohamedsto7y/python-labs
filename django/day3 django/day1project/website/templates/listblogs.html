@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+{% for blog in blogs %}
+    <a href = "{% url 'sp_blog' blog.id %}"> {{ blog.blog_name }}</a>
+    <form action="{% url 'delete_blog' blog.id %}">
+    <input type="submit" value="delete" />
+    </form>
+    <form action="{% url 'edit_blog' blog.id %}">
+    <input type="submit" value="edit" />
+    </form>
+    <br>
+{% endfor %}
+{% endblock %}

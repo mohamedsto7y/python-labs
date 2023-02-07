@@ -1,0 +1,12 @@
+hello from register
+<form method="POST">
+  {% csrf_token %}
+  <label for="fname">User name:</label><br>
+  <input type="text"  name="username" ><br>
+    <label for="fname">Email:</label><br>
+  <input type="text"  name="email" ><br>
+  <label for="lname">password:</label><br>
+  <input type="password"  name="password" ><br><br>
+  <input type="submit" value="Submit">
+</form>
+<a href="{% url 'register' %}">Register</a>

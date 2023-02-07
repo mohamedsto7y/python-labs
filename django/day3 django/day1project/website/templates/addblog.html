@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<h2>Add blog Form</h2>
+
+<form method="POST">
+  {% csrf_token %}
+  <label for="fname">Blog name:</label><br>
+  <input type="text" id="fname" name="name" value="John"><br>
+  <label for="lname">Category name:</label><br>
+  <input type="text" id="lname" name="category" value="Doe"><br><br>
+  <p><label for="w3review">Blog text:</label></p>
+  <textarea id="w3review" name="text" rows="4" cols="50"></textarea>
+  <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}
